@@ -1,21 +1,6 @@
 import discord
 from discord.ext import commands
 import csv
-import requests
-
-# url = "https://api-nba-v1.p.rapidapi.com/players/statistics"
-
-# querystring = {"id":"236","season":"2023"}
-
-# headers = {
-# 	"X-RapidAPI-Key": "a3f1d5fe9dmshd4b70a31327ee50p1c7078jsn3d9753af9eb2",
-# 	"X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com"
-# }
-
-# response = requests.get(url, headers=headers, params=querystring)
-
-# print(response.json())
-
 with open("prizepickProjections.csv", 'r') as file:
     csvreader = csv.DictReader(file)
     next(csvreader)
@@ -67,9 +52,5 @@ async def on_message(message):
                 embed = discord.Embed(title="Breakdown 🧑🏽‍🏫")
                 embed.add_field(name="", value = strBreakdown)
                 await message.channel.send(embed = embed)
-                # await message.channel.send("**Breakdown** 🧑🏽‍🏫 : \n**RotoWire Projection Factor:** " + row["RotoWire Projection Factor"] + "\n" +
-                #                                         "**Sportsbooks Factor:** " + row["Sportsbooks Factor"] + "\n" + 
-                #                                         "**DFS Pick'em Sites Factor:** " + row["DFS Pick'em Sites Factor"] + "\n" + 
-                #                                         "**Hit Rate Factor is:** " + row["Hit Rate Factor"] + "\n")
 
 client.run('MTE4MzMzNTc3MzA5Nzk1NTM4OA.GP8K1F.Tc0CiaDiU-9hK6VCh74RsLnGlgJPd1YKZZkLoE')
