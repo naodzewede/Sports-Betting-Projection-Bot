@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import csv
-with open("prizepickProjections.csv", 'r') as file:
+with open("INSERT ROTOWIRE CSV FILE", 'r') as file:
     csvreader = csv.DictReader(file)
     next(csvreader)
 
