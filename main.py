@@ -53,4 +53,4 @@ async def on_message(message):
                 embed.add_field(name="", value = strBreakdown)
                 await message.channel.send(embed = embed)
 
-client.run('MTE4MzMzNTc3MzA5Nzk1NTM4OA.GP8K1F.Tc0CiaDiU-9hK6VCh74RsLnGlgJPd1YKZZkLoE')
+client.run("INSERT DISCORD BOT TOKEN HERE")
